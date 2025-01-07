@@ -6,8 +6,8 @@ from elevenlabs.client import ElevenLabs
 from flask_cors import CORS
 
 # Configuração das APIs
-genai.configure(api_key='AIzaSyCgimG6RhIkq4nuO63gMBBiXFjw4pgjosM')
-client = ElevenLabs(api_key="sk_8dfea4cce67935a36f5b5ba94d8d9fc9c0400bd49456eb0d")
+genai.configure(api_key='sua_chave_api')
+client = ElevenLabs(api_key="sua_chave_api")
 
 app = Flask(__name__)
 

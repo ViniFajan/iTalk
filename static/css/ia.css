@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: #ffffff;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; 
+    z-index: 1000; 
+}
+
+header.hidden {
+    transform: translateY(-100%); 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.logo h1 {
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif; 
+    color: #000; 
+    margin: 0; 
+}
+
+.logo a {
+    text-decoration: none; 
+}
+
+.logo a:hover {
+    text-decoration: none; 
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 20px;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+    transform: scale(1.05);
+}
+
+.signup-btn {
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #0056b3;
+    color: #e0e0e0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos no centro horizontal da página */
+    margin-top: 100px; /* Adiciona espaçamento para que os elementos fiquem abaixo da navbar */
+}
+
+/* Botões de seleção de idiomas */
+.language-selector {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
+.custom-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    margin: 10px; /* Adiciona espaçamento entre os botões */
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.custom-btn.selected {
+  background-color: #0056b3; /* Cor mais escura para o botão selecionado */
+  color: #fff; /* Texto em branco */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+  transform: scale(1.1); /* Leve ampliação para destacar */
+}
+
+.container {
+  width: 250px; /* Diminuído de 300px para 250px */
+  height: 400px; /* Diminuído de 500px para 400px */
+  background: rgba(66, 66, 66, 0.9); /* Fundo com transparência */
+  border-radius: 20px; /* Proporcional ao tamanho reduzido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza o círculo */
+  align-items: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Ajuste na sombra */
+  margin-top: 20px; /* Espaçamento entre os botões e o container */
+}
+
+/* Círculo central */
+.circle {
+  width: 120px; /* Diminuído de 150px para 120px */
+  height: 120px; /* Diminuído de 150px para 120px */
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Azul atualizado */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Espaçamento interno ajustado */
+}
+
+/* Botões de ação */
+.buttons {
+  display: flex;
+  gap: 15px; /* Reduzido de 20px para 15px */
+  margin-top: 15px; /* Reduzido de 20px para 15px */
+  justify-content: center;
+  align-items: center;
+}
+
+.mic-button, .cancel-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 20px; /* Diminuído de 24px para 20px */
+  padding: 8px; /* Diminuído de 10px para 8px */
+  border-radius: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 40px; /* Diminuído de 50px para 40px */
+  height: 40px; /* Diminuído de 50px para 40px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mic-button img, .cancel-button img {
+  width: 20px; /* Diminuído de 24px para 20px */
+  height: 20px; /* Diminuído de 24px para 20px */
+}
+
+.mic-button:hover {
+  background-color: #ffffff;
+}
+
+.mic-button.recording {
+    background-color: #ffffff !important;
+    transition: background-color 0.3s ease;
+  }
+
+.cancel-button:hover {
+  background-color: #fc5353;
+}
